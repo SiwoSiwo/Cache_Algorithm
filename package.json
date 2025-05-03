@@ -5,7 +5,9 @@
   "scripts": {
     "build": "slidev build",
     "dev": "slidev --open",
-    "export": "slidev export"
+    "export": "slidev export",
+    "predeploy": "npm run build",
+    "deploy": "gh-pages -d dist"
   },
   "dependencies": {
     "@slidev/cli": "^51.6.0",
@@ -15,9 +17,7 @@
     "@types/d3-cloud": "^1.2.9",
     "d3": "^7.9.0",
     "d3-cloud": "^1.2.7",
-    "vue": "^3.5.13"
-  },
-  "devDependencies": {
-    "gh-pages": "^6.3.0"
+    "vue": "^3.5.13",
+    "gh-pages": "^5.0.0"
   }
 }
