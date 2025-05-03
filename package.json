@@ -1,0 +1,23 @@
+{
+  "name": "cache_algorithm",
+  "type": "module",
+  "private": true,
+  "scripts": {
+    "build": "slidev build",
+    "dev": "slidev --open",
+    "export": "slidev export"
+  },
+  "dependencies": {
+    "@slidev/cli": "^51.6.0",
+    "@slidev/theme-default": "latest",
+    "@slidev/theme-seriph": "latest",
+    "@types/d3": "^7.4.3",
+    "@types/d3-cloud": "^1.2.9",
+    "d3": "^7.9.0",
+    "d3-cloud": "^1.2.7",
+    "vue": "^3.5.13"
+  },
+  "devDependencies": {
+    "gh-pages": "^6.3.0"
+  }
+}
