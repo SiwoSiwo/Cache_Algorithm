@@ -106,7 +106,7 @@ transition: fade-out
 <br>
 <br>
 
-<img width="50%" src="./Cpu.png" alt="">
+<img width="50%" src="./pic/Cpu.png" alt="">
 上图是 CPU 性能和 Memory 存储器访问性能的发展
 
 ---
@@ -145,7 +145,7 @@ transition: fade-out
 - L1缓存分成两种，一种是指令缓存，一种是数据缓存。L2缓存和L3缓存不分指令和数据。在L1缓存中，有一个叫做Cache line的东西。 他表示cpu从一级缓存读取数据的最小单位。
 - L1和L2缓存在每一个CPU核中，L3则是所有CPU核心共享的内存。
 - L1、L2、L3的越离CPU近就越小，速度也就越快，越离CPU远，速度也越慢。
-<img width="45%" src="./L1L2L3.jpg" alt="">
+<img width="45%" src="./pic/L1L2L3.jpg" alt="">
 
 ---
 transition: fade-out
@@ -155,7 +155,7 @@ transition: fade-out
 <br>
 <br>
 
-<img width="60%" src="./Replace.png" alt="">
+<img width="60%" src="./pic/Replace.png" alt="">
 
 ---
 transition: fade-out
@@ -176,8 +176,8 @@ transition: fade-out
 2.  当缓存中不存在需要访问的数据且缓存未满时（**缓存未命中**），将该数据添加到缓存中。
 3.  当缓存中不存在需要访问的数据且缓存已满时（**缓存未命中且缓存满**），找到最近最少使用的数据并将其从缓存中移除，然后将新的数据添加到缓存中。
 <br>
-<img border="rounded" width="40%" float="left" src="./R-C.jpg" alt="">
-<img border="rounded" width="42.5%" float="right" src="./OIP-C.png" alt="">
+<img border="rounded" width="40%" float="left" src="./pic/R-C.jpg" alt="">
+<img border="rounded" width="42.5%" float="right" src="./pic/OIP-C.png" alt="">
 
 <style>
 h1 {
@@ -201,8 +201,8 @@ transition: fade-out
 * 双向链表：用于维护缓存中元素的访问顺序。链表的头部表示最近使用的元素，尾部表示最近最少使用的元素。
 <br>
 
-<img border="rounded" width="40%" float="left" src="./R-C.jpg" alt="">
-<img border="rounded" width="42.5%" float="right" src="./OIP-C.png" alt="">
+<img border="rounded" width="40%" float="left" src="./pic/R-C.jpg" alt="">
+<img border="rounded" width="42.5%" float="right" src="./pic/OIP-C.png" alt="">
 
 <style>
 h1 {
@@ -396,7 +396,18 @@ public class LRUCache<K, V> {
 }
 </style>
 
+---
+layout: two-cols
+transition: slide-up
+---
+# 测试代码
+<img width=80% src="./pic/test.png" alt="" >
+main测试代码
+::right::
 
+# 运行结果
+<img width=60% src="./pic/proceed.png" alt="" >
+最终运行结果
 ---
 layout: two-cols
 transition: slide-up
