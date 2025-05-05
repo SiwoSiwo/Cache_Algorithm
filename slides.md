@@ -304,20 +304,21 @@ public class LRUCache<K, V> {
      */
     public void put(K key, V value) {
         Node node = cache.get(key);
-        
+
         if (node == null) {
+            // 如果当前容量已满，移除最久未使用的节点
+            while (size >= capacity) {
+                Node tailNode = removeTail();
+                cache.remove(tailNode.key);
+                size--;
+            }
+
             // 如果键不存在，创建新节点
             Node newNode = new Node(key, value);
             cache.put(key, newNode);
             addToHead(newNode);
             size++;
-            
-            // 如果超过容量，移除最久未使用的节点
-            if (size > capacity) {
-                Node tailNode = removeTail();
-                cache.remove(tailNode.key);
-                size--;
-            }
+
         } else {
             // 如果键已存在，更新值并移动到头部
             node.value = value;
