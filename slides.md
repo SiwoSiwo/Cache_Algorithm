@@ -77,7 +77,7 @@ transition: fade-out
 ---
 #	CPU缓存是什么?
 - Cache是为了给CPU提供高速存储访问，利用数据局部性而设计的小存储单元。
-位于CPU与内存之间，容量比内存小的多但是交换速度却比内存要快得多。
+位于寄存器和内存之间，容量比内存小的多但是交换速度却比内存要快得多。
 <br>
 <br>
 
@@ -164,7 +164,7 @@ transition: fade-out
 
 - 随机算法(RAND)：随机选择一块替换;
 - 先进先出算法(FIFO)：替换最先被调入cache的块;
-- 近期最少使用(LRU)：为每一个Cache块设置一个“计数器”,用于记录每个Cache块已经有多久没被访问了。当Cache满后替换“计数器”最大的;
+- 近期最少使用(LRU)：维护一个访问对应的链表，每次访问时将对应块移到链表头部，替换时淘汰尾部块。
 - 最近不经常使用(LFU): 为每一个Cache块设置一个“计数器”,用于记录每个Cache块被访问的次数。当Cache满后替换“计数器”最小的;
 
 ---
@@ -224,7 +224,7 @@ transition: slide-up
 
 <div class="code-container">
 
-```ts {all|5|7|7-8|10|all}
+```ts {all}
 // 代码内容
 import java.util.HashMap;
 import java.util.Map;
