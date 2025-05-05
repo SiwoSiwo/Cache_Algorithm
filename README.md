@@ -1,11 +1,21 @@
-# Welcome to [Slidev](https://github.com/slidevjs/slidev)!
-
-To start the slide show:
-
-- `pnpm install`
-- `pnpm dev`
-- visit <http://localhost:3030>
-
-Edit the [slides.md](./slides.md) to see the changes.
-
-Learn more about Slidev at the [documentation](https://sli.dev/).
+# slidev幻灯片
+手册：https://cn.sli.dev/guide/
+-  node.js 18.17.0
+-  gh-pages
+ 
+```
+npm install
+npm run dev
+```
+部署
+```
+npm install
+npm run build
+npm run deploy
+```
+提交
+```
+git add .
+git commit "……"
+git push -u origin main
+```
